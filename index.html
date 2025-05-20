@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Ofertas - Mercado Bom Preço</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1><i class="fas fa-shopping-cart"></i> Mercado Bom Preço</h1>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Buscar produtos...">
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="cart-icon">
+      <a href="cart.html">
+        <i class="fas fa-shopping-basket"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="banner-content">
+        <h2>PROMOÇÃO IMPERDÍVEL!</h2>
+        <p>Até 70% OFF em todos os departamentos</p>
+        <button class="cta-button">Confira</button>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Categorias em Oferta</h2>
+      <div class="category-filters">
+        <button class="filter-btn active" data-category="all">Todas</button>
+        <button class="filter-btn" data-category="hortifruti">Hortifruti</button>
+        <button class="filter-btn" data-category="carnes">Carnes</button>
+        <button class="filter-btn" data-category="bebidas">Bebidas</button>
+        <button class="filter-btn" data-category="limpeza">Limpeza</button>
+      </div>
+    </section>
+
+    <section class="promo-carousel">
+      <h2>Destaques da Semana</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel" id="featured-carousel">
+          <!-- Carregado via JavaScript -->
+        </div>
+        <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <section class="all-promos">
+      <h2>Todas as Promoções</h2>
+      <div class="promo-grid" id="promo-grid">
+        <!-- Carregado via JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Horário de Funcionamento</h3>
+        <p>Seg a Sab: 8h às 22h</p>
+        <p>Dom: 9h às 20h</p>
+      </div>
+      <div class="footer-section">
+        <h3>Formas de Pagamento</h3>
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fas fa-barcode"></i>
+          <i class="fas fa-money-bill-wave"></i>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 Mercado Bom Preço - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Modal de Zoom -->
+  <div class="zoom-modal" id="zoom-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="zoomed-image" src="" alt="Produto em zoom">
+      <div class="modal-product-info">
+        <h3 id="modal-product-name"></h3>
+        <p class="new-price" id="modal-product-price"></p>
+        <button class="add-to-cart" id="modal-add-to-cart">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
