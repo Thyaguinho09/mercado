@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Mercado Bom Preço</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1><i class="fas fa-shopping-cart"></i> Mercado Bom Preço</h1>
+    </div>
+    <div class="cart-icon">
+      <a href="index.html">
+        <i class="fas fa-home"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="cart-container">
+    <h2>Seu Carrinho</h2>
+    
+    <div class="cart-items" id="cart-items">
+      <!-- Itens serão carregados via JavaScript -->
+    </div>
+    
+    <div class="cart-summary">
+      <div class="summary-details">
+        <h3>Resumo do Pedido</h3>
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="subtotal">R$ 0,00</span>
+        </div>
+        <div class="summary-row">
+          <span>Descontos:</span>
+          <span id="discounts">R$ 0,00</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total:</span>
+          <span id="total">R$ 0,00</span>
+        </div>
+      </div>
+      <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Horário de Funcionamento</h3>
+        <p>Seg a Sab: 8h às 22h</p>
+        <p>Dom: 9h às 20h</p>
+      </div>
+      <div class="footer-section">
+        <h3>Formas de Pagamento</h3>
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fas fa-barcode"></i>
+          <i class="fas fa-money-bill-wave"></i>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 Mercado Bom Preço - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
