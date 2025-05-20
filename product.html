@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto - Mercado Bom Preço</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1><i class="fas fa-shopping-cart"></i> Mercado Bom Preço</h1>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar produtos...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="cart-icon">
+      <a href="cart.html">
+        <i class="fas fa-shopping-basket"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="product-container">
+    <div class="product-gallery">
+      <img src="https://via.placeholder.com/500x500?text=Produto" alt="Produto" id="main-product-image">
+      <div class="thumbnail-container">
+        <img src="https://via.placeholder.com/100x100?text=Thumb1" alt="Thumbnail 1" class="thumbnail">
+        <img src="https://via.placeholder.com/100x100?text=Thumb2" alt="Thumbnail 2" class="thumbnail">
+        <img src="https://via.placeholder.com/100x100?text=Thumb3" alt="Thumbnail 3" class="thumbnail">
+      </div>
+    </div>
+    
+    <div class="product-details">
+      <h1 id="product-name">Nome do Produto</h1>
+      <div class="price-container">
+        <span class="old-price">R$ 99,99</span>
+        <span class="new-price">R$ 79,99</span>
+        <span class="discount-badge">-20%</span>
+      </div>
+      
+      <div class="product-description">
+        <h3>Descrição</h3>
+        <p id="product-description">Descrição detalhada do produto aqui...</p>
+      </div>
+      
+      <div class="quantity-selector">
+        <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+        <input type="number" value="1" min="1" id="product-quantity">
+        <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+      </div>
+      
+      <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+      
+      <div class="product-meta">
+        <div class="meta-item">
+          <i class="fas fa-tag"></i>
+          <span>Categoria: <span id="product-category">Carnes</span></span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-box"></i>
+          <span>Disponibilidade: <span id="product-stock">Em estoque</span></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Horário de Funcionamento</h3>
+        <p>Seg a Sab: 8h às 22h</p>
+        <p>Dom: 9h às 20h</p>
+      </div>
+      <div class="footer-section">
+        <h3>Formas de Pagamento</h3>
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fas fa-barcode"></i>
+          <i class="fas fa-money-bill-wave"></i>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 Mercado Bom Preço - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
