@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Super Ofertas - mercado do thythy</title>
-
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Firebase SDK -->
@@ -13,6 +12,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 </head>
 <body>
+  <!-- Cabeçalho permanece o mesmo -->
   <header>
     <div class="logo">
       <h1><i class="fas fa-shopping-cart"></i> Mercado do thythy</h1>
@@ -30,6 +30,7 @@
   </header>
 
   <main>
+    <!-- Banner permanece o mesmo -->
     <section class="banner">
       <div class="banner-content">
         <h2>PROMOÇÃO IMPERDÍVEL!</h2>
@@ -38,17 +39,103 @@
       </div>
     </section>
 
+    <!-- Seção de Categorias com produtos exemplos -->
     <section class="categories">
       <h2>Categorias em Oferta</h2>
       <div class="category-filters">
         <button class="filter-btn active" data-category="all">Todas</button>
-        <button class="filter-btn" data-category="hortifruti"><a href="Hortifruti.html">Hortifruti</a></button>
-        <button class="filter-btn" data-category="carnes"><a href="Carnes.html">Carnes</a></button>
-        <button class="filter-btn" data-category="bebidas"><a href="Bebidas.html">Bebidas</a></button>
-        <button class="filter-btn" data-category="limpeza"><a href="Limpeza.html">Limpeza</a></button>
+        
+        <!-- Hortifruti -->
+        <div class="category-products" id="hortifruti">
+          <h3>Hortifruti</h3>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="https://img.freepik.com/fotos-gratis/bananas-amarelas-isoladas_2829-1833.jpg" alt="Banana">
+              <h4>Banana Prata</h4>
+              <p class="old-price">R$ 5,99/kg</p>
+              <p class="new-price">R$ 3,99/kg</p>
+              <button class="add-to-cart">Adicionar</button>
+            </div>
+            <div class="product-card">
+              <img src="https://img.freepik.com/fotos-gratis/macas-vermelhas_144627-26389.jpg" alt="Maçã">
+              <h4>Maçã Argentina</h4>
+              <p class="old-price">R$ 8,99/kg</p>
+              <p class="new-price">R$ 6,49/kg</p>
+              <button class="add-to-cart">Adicionar</button>
+            </div>
+          </div>
+          <a href="Hortifruti.html" class="see-more">Ver mais ofertas de Hortifruti →</a>
+        </div>
+        
+        <!-- Carnes -->
+        <div class="category-products" id="carnes">
+          <h3>Carnes</h3>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="https://img.freepik.com/fotos-gratis/bife-de-costela-cru-na-tabua-de-madeira_1150-42580.jpg" alt="Picanha">
+              <h4>Picanha Bovina</h4>
+              <p class="old-price">R$ 69,90/kg</p>
+              <p class="new-price">R$ 59,90/kg</p>
+              <button class="add-to-cart">Adicionar</button>
+            </div>
+            <div class="product-card">
+              <img src="https://img.freepik.com/fotos-gratis/frango-cru-com-ingredientes_23-2148534775.jpg" alt="Peito de Frango">
+              <h4>Peito de Frango</h4>
+              <p class="old-price">R$ 18,90/kg</p>
+              <p class="new-price">R$ 15,90/kg</p>
+              <button class="add-to-cart">Adicionar</button>
+            </div>
+          </div>
+          <a href="Carnes.html" class="see-more">Ver mais ofertas de Carnes →</a>
+        </div>
+        
+        <!-- Bebidas -->
+        <div class="category-products" id="bebidas">
+          <h3>Bebidas</h3>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="https://img.freepik.com/fotos-gratis/garrafas-de-refrigerante-de-cola_53876-94868.jpg" alt="Refrigerante">
+              <h4>Coca-Cola 2L</h4>
+              <p class="old-price">R$ 8,99</p>
+              <p class="new-price">R$ 6,99</p>
+              <button class="add-to-cart">Adicionar</button>
+            </div>
+            <div class="product-card">
+              <img src="https://img.freepik.com/fotos-gratis/cerveja-gelada_140725-1270.jpg" alt="Cerveja">
+              <h4>Heineken 600ml</h4>
+              <p class="old-price">R$ 7,99</p>
+              <p class="new-price">R$ 5,99</p>
+              <button class="add-to-cart">Adicionar</button>
+            </div>
+          </div>
+          <a href="Bebidas.html" class="see-more">Ver mais ofertas de Bebidas →</a>
+        </div>
+        
+        <!-- Limpeza -->
+        <div class="category-products" id="limpeza">
+          <h3>Limpeza</h3>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="https://img.freepik.com/fotos-gratis/detergente-para-louca-e-esponja-na-cozinha_23-2148626978.jpg" alt="Detergente">
+              <h4>Detergente Ypê</h4>
+              <p class="old-price">R$ 2,49</p>
+              <p class="new-price">R$ 1,99</p>
+              <button class="add-to-cart">Adicionar</button>
+            </div>
+            <div class="product-card">
+              <img src="https://img.freepik.com/fotos-gratis/sabao-em-po-em-uma-embalagem-plastica-isolada_93675-129243.jpg" alt="Sabão em Pó">
+              <h4>OMO 1kg</h4>
+              <p class="old-price">R$ 18,90</p>
+              <p class="new-price">R$ 15,90</p>
+              <button class="add-to-cart">Adicionar</button>
+            </div>
+          </div>
+          <a href="Limpeza.html" class="see-more">Ver mais ofertas de Limpeza →</a>
+        </div>
       </div>
     </section>
 
+    <!-- Restante do conteúdo permanece o mesmo -->
     <section class="promo-carousel">
       <h2>Destaques da Semana</h2>
       <div class="carousel-container">
@@ -68,12 +155,13 @@
     </section>
   </main>
 
+  <!-- Rodapé permanece o mesmo -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
         <h3>Horário de Funcionamento</h3>
         <p>Seg a Sab: 8h às 22h</p>
-        <p>Dom: 9h às 20h</p>
+        
       </div>
       <div class="footer-section">
         <h3>Formas de Pagamento</h3>
@@ -86,7 +174,7 @@
       </div>
     </div>
     <div class="copyright">
-      <p>&copy; 2023 Mercado Bom Preço - Todos os direitos reservados</p>
+      <p>&copy; 2025 Mercearia do thythy - Todos os direitos reservados</p>
     </div>
   </footer>
 
